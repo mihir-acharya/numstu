@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Numstu</title>
+<title>NUMSTU</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,32 +11,89 @@
 <div class="app">
 
 <header>
-    <h1>NUMSTU</h1>
-    <p>Numerology & Vaastu</p>
+    <img src="./numstu-logo.png" alt="NUMSTU Logo" id="logo"
+         onerror="console.error('Logo failed to load:', this.src); this.style.display='none'">
 </header>
 
 <section class="services">
 
-<div class="card">
-    <h3>📱 Mobile Numerology</h3>
-    <button onclick="selectService('Mobile Numerology')">Book</button>
-</div>
+  <div class="card">
+      <h3>📱 Mobile Numerology</h3>
+      <button onclick="selectService('Mobile Numerology')">Book</button>
+  </div>
 
-<div class="card">
-    <h3>🏠 Vaastu Consultation</h3>
-    <button onclick="selectService('Vaastu')">Book</button>
-</div>
+  <div class="card">
+      <h3>🏠 Vaastu Consultation</h3>
+      <button onclick="selectService('Vaastu')">Book</button>
+  </div>
 
-<div class="card">
-    <h3>👶 Baby Name</h3>
-    <button onclick="selectService('Baby Name')">Book</button>
-</div>
+  <div class="card">
+      <h3>✍️ Name Correction</h3>
+      <button onclick="selectService('Name Correction')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>🏢 Business Name</h3>
+      <button onclick="selectService('Business Name')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>👶 New Born Baby Name</h3>
+      <button onclick="selectService('New Born Baby Name')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>🏡 Home Planning</h3>
+      <button onclick="selectService('Home Planning')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>📐 Plot Checking</h3>
+      <button onclick="selectService('Plot Checking')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>🏢 Office Vastu</h3>
+      <button onclick="selectService('Office Vastu')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>🏭 Industry Vastu</h3>
+      <button onclick="selectService('Industry Vastu')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>📐 Project Vastu</h3>
+      <button onclick="selectService('Project Vastu')">Book</button>
+  </div>
+
+  <div class="card">
+      <h3>🕉️ Vastu Puja</h3>
+      <button onclick="selectService('Vastu Puja')">Book</button>
+  </div>
 
 </section>
 
 <section class="booking">
-    <input type="date" id="date">
-    <button onclick="book()">Confirm Booking</button>
+  <!-- required note -->
+  <div style="color:#dc2626;font-size:13px;margin-bottom:8px;font-weight:600;">
+    * All fields are mandatory — please fill all details to confirm booking
+  </div>
+
+  <label for="custName">Your name <span style="color:#dc2626">*</span></label>
+  <input type="text" id="custName" placeholder="Your name" required aria-required="true">
+
+  <label for="custMobile">Mobile (e.g. +9198xxxxxxxx) <span style="color:#dc2626">*</span></label>
+  <input type="tel" id="custMobile" placeholder="Mobile (e.g. +9198xxxxxxxx)" required aria-required="true" pattern="^\+?\d{10,15}$">
+
+  <label for="custLocation">Location / City <span style="color:#dc2626">*</span></label>
+  <input type="text" id="custLocation" placeholder="Location / City" required aria-required="true">
+
+  <label for="date">Preferred date <span style="color:#dc2626">*</span></label>
+  <input type="date" id="date" required aria-required="true">
+
+  <button onclick="book()">Confirm Booking</button>
+  <div id="bookingMsg" style="margin-top:8px;"></div>
 </section>
 
 <section class="chatbot">
