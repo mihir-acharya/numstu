@@ -23,7 +23,7 @@ Message: ${message}`;
     window.open(url, "_blank");
 }
 
-function payNow() {
+#function payNow() {
     fetch("/create-order", {method:"POST"})
     .then(res => res.json())
     .then(data => {
