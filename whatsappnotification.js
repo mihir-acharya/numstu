@@ -1,0 +1,1 @@
+window.open(`https://wa.me/919114955131?text=New Booking: ${selectedService} on ${date}`);

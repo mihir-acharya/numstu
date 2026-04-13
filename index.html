@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numstu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+    <h1>NUMSTU</h1>
+    <p>Numerology & Vaastu</p>
+</header>
+
+<section class="services">
+
+<div class="card">
+    <h3>📱 Mobile Numerology</h3>
+    <button onclick="selectService('Mobile Numerology')">Book</button>
+</div>
+
+<div class="card">
+    <h3>🏠 Vaastu Consultation</h3>
+    <button onclick="selectService('Vaastu')">Book</button>
+</div>
+
+<div class="card">
+    <h3>👶 Baby Name</h3>
+    <button onclick="selectService('Baby Name')">Book</button>
+</div>
+
+</section>
+
+<section class="booking">
+    <input type="date" id="date">
+    <button onclick="book()">Confirm Booking</button>
+</section>
+
+<section class="chatbot">
+    <h3>Ask Numerology AI</h3>
+    <input id="chatInput" placeholder="Ask something...">
+    <button onclick="chat()">Send</button>
+    <div id="chatBox"></div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
